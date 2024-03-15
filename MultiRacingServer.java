@@ -95,10 +95,10 @@ public class MultiRacingServer {
     //방 번호(생성될때 마다 증가한다. 동기화 문제로 여러쓰레드에서 접근했을때 순차적으로 오르는것을 보장)
     AtomicInteger m_atomicInteger;
 
-    //Key : 유저닉네임 Value : 방
+    //Key : 방ID, Value : 방
     HashMap<Integer, Room> m_roomList;
 
-    //Key : 유저이름 Value : 유저 -> 서버에 접속해 있는 전체 유저(전체 대기방)
+    //Key : 유저이름, Value : 유저 -> 서버에 접속해 있는 전체 유저(전체 대기방)
     HashMap<String, User> m_userAllList;
 
     public static void main(String args[]) {
